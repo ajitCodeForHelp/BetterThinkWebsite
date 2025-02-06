@@ -1,0 +1,249 @@
+ body {
+   font-family: "HCLTech Roobert", sans-serif;
+ }
+
+
+ /* ----Upper-nav------- */
+ .header {
+   background-color: #222;
+   color: #ffcc00;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 30px;
+   font-size: 12px;
+   font-weight: 500;
+ }
+
+ .header .location {
+   display: flex;
+   align-items: center;
+   gap: 15px;
+ }
+
+ .header .contact {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+ }
+
+ .header .icon {
+   color: #ff8000;
+   font-size: 16px;
+ }
+
+ /* ----Hero-Section------ */
+ .hero-section {
+   background-color: #f7931e;
+   color: #000;
+   height: 550px;
+   overflow: hidden;
+ }
+ /* Hero Text */
+ .hero-section .hero-text h1 {
+   font-size: 40px;
+   font-weight: 300;
+   line-height: 1.2;
+ }
+
+ .hero-section .underscore {
+   color: #000;
+ }
+
+ /* Laptop Image */
+ .hero-section .hero-image img {
+   width: 600px;
+   max-width: 100%;
+ }
+
+ /* Top Navigation */
+ .hero-section .hero-nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 25px 30px;
+ }
+
+ /* Logo */
+ .hero-section .logo {
+   font-size: 40px;
+   font-weight: bold;
+ }
+
+ .hero-section .logo .black {
+   color: #000;
+ }
+
+ .hero-section .logo .white {
+   color: #fff;
+ }
+
+ /* Navbar Links */
+ .hero-section .hero-nav nav {
+   display: flex;
+   gap: 30px;
+ }
+
+ .hero-section .hero-nav nav span {
+   color: #000;
+   font-weight: 500;
+   font-size: 20px;
+   text-decoration: none;
+ }
+
+ /* CTA Button */
+ .custom-btn {
+ 
+}
+ .hero-section .btn-15 {
+  background:white;
+  border: none;
+  z-index: 1;
+}
+.hero-section .btn-15:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color:white;
+  border-radius: 30px;
+  color: #000;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  transition: all 0.3s ease;
+}
+.hero-section .btn-15:hover {
+  color:black;
+}
+.hero-section .btn-15:hover:after {
+  left: 0;
+  width: 100%;
+}
+.hero-section .btn-15:active {
+  top: 2px;
+}
+
+
+
+ .hero-section .cta-button {
+   background-color: black;
+   color: white;
+   padding: 16px 26px;
+   font-size: 20px;
+   border-radius: 30px;
+   display: flex;
+   align-items: center;
+   border: none;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   position: relative;
+   display: inline-block;
+   outline: none;
+ }
+
+ .hero-section .arrow-icon {
+   margin-left: 10px;
+ }
+
+ .hero-section .hero-text-section {
+   align-items: center;
+   height: 400px;
+   justify-content: center;
+   display: flex;
+   width: 100%;
+ }
+
+ .hero-section .hero-text-section .hero-flex {
+   margin-top: 50px;
+   align-items: center;
+   justify-content: space-between;
+   display: flex;
+   width: 80%;
+ }
+
+ .row {
+   width: 80%;
+ }
+
+ .hero-section-b {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   background-color: #f7931e;
+   padding: 40px 0px 50px 0px;
+ }
+
+ .hero-section-b h1 {
+   width: 70%;
+   font-weight: 400;
+ }
+
+ /* ----Partner-carsoul------ */
+ .partner-carousel {
+   background-color: #f7931e;
+   border-width: 1px;
+   border-style: solid;
+   -o-border-image: linear-gradient(90deg, #ff9720, #fff, #ff7b02) 1;
+   border-image: linear-gradient(90deg, #ff9720, #fff, #ff7b02) 1;
+   border-left: 0;
+   border-right: 0;
+ }
+
+ .partner-carousel h4 {
+   font-size: 20px;
+
+ }
+
+ /* -----work-view---- */
+ .work-view {
+   background-color: #f7931e;
+ }
+
+ .work-view .work-view-img {
+   position: relative;
+ }
+
+ .work-view .flex-btn {
+   position: absolute;
+   z-index: 1000;
+   bottom: 25px;
+   left: 30px;
+ }
+ 
+
+ .work-view .work-view-carousel {
+   position: absolute;
+   top: 10%;
+   left: 27%;
+ }
+
+ .work-view .work-width {
+   width: 520px;
+   height: auto;
+ }
+
+ .work-view .flex-btn .btn {
+   background-color: #545454;
+   /* Dark gray background */
+   color: white;
+   /* White text */
+   border: none;
+   /* No border */
+   border-radius: 50px;
+   /* Rounded edges */
+   padding: 8px 16px;
+   /* Padding */
+   font-size: 16px;
+   /* Font size */
+   transition: background-color 0.3s ease;
+ }
+
+ .work-view .flex-btn .btn:hover {
+   background-color: #7e7e7e;
+   /* Slightly darker on hover */
+ }

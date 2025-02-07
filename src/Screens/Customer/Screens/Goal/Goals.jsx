@@ -6,7 +6,7 @@ import { FaTools, FaLightbulb, FaChartLine } from "react-icons/fa";
 function Goals() {
   return (
     <>
-      <div style={{ backgroundColor: "#222", color: "#fff", padding: "6rem 0" }}>
+      <div style={{ backgroundColor: "#222", color: "#fff", padding: "6rem 0", height: "100vh", overflow: "hidden" }} data-gole>
         <Container style={{ maxWidth: "1200px", }}>
           <div className=" d-flex justify-content-between">
             {/* Build Section */}
@@ -14,9 +14,9 @@ function Goals() {
               <div>
                 <div className="d-flex align-items-center">
                   <FaTools size={40} color="#f9a825" className="mb-3 me-3" />
-                  <h3 style={{ color: "#f9a825", font:"2.5rem" }}>Build</h3>
+                  <h3 style={{ color: "#f9a825", font: "2.5rem" }}>Build</h3>
                 </div>
-                <p style={{font:"1.2rem"}}>
+                <p style={{ font: "1.2rem" }}>
                   With a dedicated team, we build exceptional projects, focusing on
                   quality, transparency, efficient management, and innovative
                   solutions to ensure complete client satisfaction and success.
@@ -29,9 +29,9 @@ function Goals() {
               <div>
                 <div className="d-flex align-items-center">
                   <FaLightbulb size={40} color="#f9a825" className="mb-3 me-3" />
-                  <h3 style={{ color: "#f9a825",font:"2.5rem" }}>Maintain</h3>
+                  <h3 style={{ color: "#f9a825", font: "2.5rem" }}>Maintain</h3>
                 </div>
-                <p style={{font:"1.2rem"}}>
+                <p style={{ font: "1.2rem" }}>
                   We maintain websites and apps with a commitment to quality,
                   reliability, and proactive management, ensuring they run
                   smoothly and meet ongoing client needs.
@@ -44,9 +44,9 @@ function Goals() {
               <div>
                 <div className="d-flex align-items-center">
                   <FaChartLine size={40} color="#f9a825" className="mb-3 me-3" />
-                  <h3 style={{ color: "#f9a825",font:"2.5rem" }}>Grow</h3>
+                  <h3 style={{ color: "#f9a825", font: "2.5rem" }}>Grow</h3>
                 </div>
-                <p style={{font:"1.2rem"}}>
+                <p style={{ font: "1.2rem" }}>
                   We help businesses grow by enhancing their digital presence,
                   optimizing performance, and implementing strategies that drive
                   engagement, conversions, and long-term success.

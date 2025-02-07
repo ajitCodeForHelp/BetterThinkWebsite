@@ -1,15 +1,15 @@
 // src/components/Slider.js
 import React from 'react';
 import './Style.scss';
-import slider1 from "../../../Assets/slider-1.jpeg";
-import slider2 from "../../../Assets/slider-2.jpeg";
-import slider3 from "../../../Assets/slider-3.jpeg";
+import slider1 from "../../../Assets/work1.png";
+import slider2 from "../../../Assets/work2.png";
+import slider3 from "../../../Assets/work1.png";
 
 const Slider = () => (
 
     <div className="slider" data-slider>
         <div className="slider_title">
-            <span>OUR</span> <span>WORK</span>
+            {/* <span>OUR</span> <span>WORK</span> */}
         </div>
         <div className="slider_inner" data-slider-inner>
             <div className="slider_slide" data-slider-slide>

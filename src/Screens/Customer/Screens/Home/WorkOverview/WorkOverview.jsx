@@ -1,5 +1,5 @@
 import React from "react";
-import { Button,} from "react-bootstrap";
+import { Button, } from "react-bootstrap";
 import img from "../../../../../Assets/banner-1.webp";
 import image1 from "../../../../../Assets/slider-1.jpeg";
 import image2 from "../../../../../Assets/slider-2.jpeg";
@@ -13,7 +13,7 @@ function WorkOverview() {
     return (
         <>
 
-            <div className="work-view d-flex justify-content-center">
+            <div className="work-view d-flex justify-content-center" style={{ minHeight: "100vh",overflow:"hidden" }} data-gole>
                 <div className="work-view-img mt-5 mb-5 text-center">
                     {/* Main Banner Image */}
                     <img src={img} alt="img" className="img-fluid main-banner" />
@@ -74,8 +74,6 @@ function WorkOverview() {
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>

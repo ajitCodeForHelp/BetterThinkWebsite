@@ -1,45 +1,49 @@
 // src/components/Layer.js
 import React from 'react';
 import './Style.scss';
+import quot1 from "../../../Assets/quot3.avif";
+import quot2 from "../../../Assets/quot1.jpeg";
+import quot3 from "../../../Assets/quot2.jpeg";
 
 const Layer = () => (
-    
+
     <div className="layer active" data-layer>
         <div className="layer_title">
             <p data-layer-text>
-                <span>Lorem</span> Ipsum
+                {/* Our IT company bridges dreams and innovation, delivering solutions that transform futures. */}
+                <span>Our</span> company
                 <em></em>
-                <span>is</span>
+                <span>bridges</span>
                 <br />
                 <span>
-                    simply<em></em>dummy
+                    dreams<em></em>and
                 </span>{' '}
-                text <span>of<br /> the</span>{' '}
-                <span>printing</span>{' '}
-                <span>and</span>
+                innovation, <span>delivering<br /> solutions</span>{' '}
+                <span>that</span>{' '}
+                <span>transform</span>
                 <em></em>
-                typesetting <span>industry</span>
+                futures <span>industry</span>
             </p>
         </div>
         <img
             width="612"
             height="459"
-            src="https://media.istockphoto.com/photos/beautiful-young-girl-with-nice-sincere-smile-picture-id1188264202?k=20&m=1188264202&s=612x612&w=0&h=Msb2jSOhw2oj2IbFT_RrIWMrk59vcybbzhsdosTXYMM="
-            data-src="https://media.istockphoto.com/photos/beautiful-young-girl-with-nice-sincere-smile-picture-id1188264202?k=20&m=1188264202&s=612x612&w=0&h=Msb2jSOhw2oj2IbFT_RrIWMrk59vcybbzhsdosTXYMM="
+            src={quot1}
+            data-src={quot1}
             alt=""
         />
         <img
             width="612"
             height="340"
-            src="https://media.istockphoto.com/photos/young-beautiful-woman-on-dark-background-picture-id475384433?k=20&m=475384433&s=612x612&w=0&h=sU3x4NPuKJGflOCX2khUKI2zXPFFwpHmL2DqhcyMc3E="
-            data-src="https://media.istockphoto.com/photos/young-beautiful-woman-on-dark-background-picture-id475384433?k=20&m=475384433&s=612x612&w=0&h=sU3x4NPuKJGflOCX2khUKI2zXPFFwpHmL2DqhcyMc3E="
+            src={quot2}
+            data-src={quot2}
             alt=""
         />
         <img
             width="612"
             height="459"
-            src="https://media.istockphoto.com/photos/portrait-of-a-beautiful-young-woman-posing-against-a-brown-background-picture-id1324035745?k=20&m=1324035745&s=612x612&w=0&h=68QT5DIMLRXEcC1aZUzAZWBI79KtCbgcTGHiObooSfo="
-            data-src="https://media.istockphoto.com/photos/portrait-of-a-beautiful-young-woman-posing-against-a-brown-background-picture-id1324035745?k=20&m=1324035745&s=612x612&w=0&h=68QT5DIMLRXEcC1aZUzAZWBI79KtCbgcTGHiObooSfo="
+            src={quot3}
+            data-src={quot3}
             alt=""
         />
         <video playsInline autoPlay muted loop>

@@ -24,16 +24,16 @@ function Home() {
                     <HeroSection />
                     <PartnerCarousel />
                     <WorkOverview />
-                    <ServicesSection/>
-        <Goals />
+                    <ServicesSection />
+                    <Goals />
                     <Slider />
                     <Layer />
+                    <ClientReviewsCarousel />
+                    <Footer />
                 </div>
                 <div className="scroll" data-scroll></div>
             </div>
-        <ClientReviewsCarousel/>
-      
-        <Footer/>
+
         </>
     )
 }

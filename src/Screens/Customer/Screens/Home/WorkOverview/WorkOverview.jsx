@@ -1,11 +1,11 @@
 import React from "react";
-import { Carousel, Button, Container } from "react-bootstrap";
-import img from "../../../../Assets/banner-1.webp";
-import image1 from "../../../../Assets/slider-1.jpeg";
-import image2 from "../../../../Assets/slider-2.jpeg";
-import image3 from "../../../../Assets/slider-3.jpeg";
-import workimg1 from "../../../../Assets/banner-2.jpeg"
-import workimg2 from "../../../../Assets/banner-3.jpeg"
+import { Button,} from "react-bootstrap";
+import img from "../../../../../Assets/banner-1.webp";
+import image1 from "../../../../../Assets/slider-1.jpeg";
+import image2 from "../../../../../Assets/slider-2.jpeg";
+import image3 from "../../../../../Assets/slider-3.jpeg";
+// import workimg1 from "../../../../../Assets/banner-2.jpeg"
+// import workimg2 from "../../../../../Assets/banner-3.jpeg"
 import "bootstrap/dist/css/bootstrap.min.css"; // Bootstrap CSS
 import "bootstrap/dist/js/bootstrap.bundle.min"; // Bootstrap JS
 

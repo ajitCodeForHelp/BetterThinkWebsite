@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../../../../Assets/pearson.png"
+import img from "../../../../../Assets/pearson.png"
 function PartnerCarousel() {
 
     const partners = [

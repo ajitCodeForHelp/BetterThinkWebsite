@@ -6,6 +6,8 @@ import AdminLogin from "../Screens/Admin/Auth/AdminLogin";
 import MergeComponents from "../Screens/Admin/Components/MergeComponents";
 import Message from "../Screens/Admin/Screens/Message";
 import Home from "../Screens/Customer/Screens/Home";
+import ContactForm from "../Screens/Customer/Screens/Form/ContactForm";
+
 
 function Routing() {
     return (
@@ -19,6 +21,7 @@ function Routing() {
                         <Route path="ContectUs" element={<MergeComponents getComponent={<Message />} />} />
                     </Route>
                     <Route path="/" element={<Home />} />
+                    <Route path="/contactform" element={<ContactForm/>} />
                 </Routes>
             </BrowserRouter>
         </>

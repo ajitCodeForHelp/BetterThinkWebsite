@@ -1,9 +1,12 @@
 import React, { useEffect } from "react";
 import Navbar from "../CommonComponent/Navbar";
-import HeroSection from "./HeroSection/HeroSection";
-import PartnerCarousel from "./Carousel/PartnerCarousel";
-import WorkOverview from "./WorkOverview/WorkOverview";
-import Goals from "./Goal/Goals";
+import HeroSection from "./Home/HeroSection/HeroSection";
+import PartnerCarousel from "./Home/Carousel/PartnerCarousel";
+import WorkOverview from "./Home/WorkOverview/WorkOverview";
+import Goals from "./Home/Goal/Goals";
+import ClientReviewsCarousel from "./Home/ClientReviewsCarousel/ClientReviewsCarousel";
+import ServicesSection from "./Home/ServicesSection/ServicesSection";
+import Footer from "../CommonComponent/Footer";
 import Sketch from "../../../Utilities/Sketch";
 import Slider from "../CommonComponent/SliderUi";
 import "../CommonComponent/Style.scss";
@@ -21,12 +24,16 @@ function Home() {
                     <HeroSection />
                     <PartnerCarousel />
                     <WorkOverview />
-                    <Goals />
+                    <ServicesSection/>
+        <Goals />
                     <Slider />
                     <Layer />
                 </div>
                 <div className="scroll" data-scroll></div>
             </div>
+        <ClientReviewsCarousel/>
+      
+        <Footer/>
         </>
     )
 }

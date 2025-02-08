@@ -27,7 +27,7 @@ function Slider({ isSidebarHidden }) {
                                 <span className="text">{item.text}</span>
                             </Link>
                         </li>
-                    ))}
+                    ))}  
                 </ul>
                 <ul className="side-menu bottom">
                     <li>

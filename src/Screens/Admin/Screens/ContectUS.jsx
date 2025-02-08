@@ -1,9 +1,44 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Slider from "../Components/Slider";
 import { Link } from "react-router-dom";
 import user from "../../../Assets/Image/man.png"
 
 function ContectUs() {
+
+    const [selectedFilter, setSelectedFilter] = useState();
+    const filterBy = [
+        {
+            id: "1",
+            name: "All"
+        },
+        {
+            id: "5",
+            name: "A-Z"
+        },
+        {
+            id: "2",
+            name: "Z-A"
+        },
+        {
+            id: "3",
+            name: "Recent"
+        },
+        {
+            id: "4",
+            name: "Oldest"
+        },
+    ];
+    const [toggleFilter, setToggleFilter] = useState(false);
+    const toggleFilterRef = useRef();
+    useEffect(() => {
+        const handleOutsideClick = (event) => {
+            if (!toggleFilterRef?.current?.contains(event.target)) {
+                setToggleFilter(false);
+            }
+        };
+        document.addEventListener("mousedown", handleOutsideClick);
+    }, [toggleFilterRef]);
+
     return (
         <>
             <main>
@@ -55,8 +90,27 @@ function ContectUs() {
                     <div className="order">
                         <div className="head">
                             <h3>Recent Queries</h3>
-                            <i className='bx bx-search' ></i>
-                            <i className='bx bx-filter' ></i>
+                            <div className="search-input">
+                                <input type="text" placeholder="search" />
+                                <i className='bx bx-search' ></i>
+                            </div>
+                            <div className="query-filter" ref={toggleFilterRef}>
+                                <i className='bx bx-filter' onClick={() => setToggleFilter(!toggleFilter)} ></i>
+                                <div className={`filter-menu ${toggleFilter ? "show" : ""}`}>
+                                    {
+                                        filterBy.map((itm) => {
+                                            return (
+                                                <>
+                                                    <label htmlFor={itm.id} key={itm.id}>
+                                                        <input type="radio" value={itm.name} name="filters" id={itm.id} checked={selectedFilter === itm.name} onChange={(e) => { setSelectedFilter(e.target.value); setToggleFilter(false) }} />
+                                                        {itm.name}
+                                                    </label>
+                                                </>
+                                            )
+                                        })
+                                    }
+                                </div>
+                            </div>
                         </div>
                         <table>
                             <thead>
@@ -72,7 +126,7 @@ function ContectUs() {
                                         <>
                                             <tr>
                                                 <td>
-                                                    <img src={user} alt="img"/>
+                                                    <img src={user} alt="img" />
                                                     {/* <i class='bx bxs-user'></i> */}
                                                     <p>Jhon Wick</p>
                                                 </td>

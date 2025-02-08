@@ -407,6 +407,7 @@ body.dark #content nav .notification-menu li a {
 #content nav .profile-menu li:hover {
     background-color: var(--light-blue);
     color: var(--dark);
+    cursor: pointer;
 }
 
 #content nav .profile-menu li a {
@@ -644,6 +645,30 @@ body.dark #content nav .profile-menu li a {
     margin-bottom: 24px;
 }
 
+#content main .table-data .head .search-input {
+    background-color: var(--grey);
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 10px;
+    width: 20%;
+}
+
+#content main .table-data .head .search-input input {
+    border: none;
+    color: black;
+    background-color: var(--grey);
+    font-size: .8rem;
+    width: 88%;
+}
+
+#content main .table-data .head .search-input input:focus {
+    outline: none;
+    box-shadow: none;
+
+}
+
 #content main .table-data .head h3 {
     margin-right: auto;
     font-size: 24px;
@@ -651,6 +676,41 @@ body.dark #content nav .profile-menu li a {
 }
 
 #content main .table-data .head .bx {
+    cursor: pointer;
+}
+
+#content main .table-data .head .query-filter {
+    position: relative;
+}
+
+#content main .table-data .head .query-filter .filter-menu {
+    display: none;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background: var(--light);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    width: 140px;
+    z-index: 9999;
+    font-family: var(--lato);
+}
+
+#content main .table-data .head .query-filter .filter-menu.show {
+    display: block;
+}
+
+#content main .table-data .head .query-filter .filter-menu label {
+    margin: 5px;
+    padding: 5px;
+    gap: 10px;
+    display: flex;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+#content main .table-data .head .query-filter .filter-menu label:hover {
+    background-color: var(--grey);
     cursor: pointer;
 }
 
@@ -878,6 +938,10 @@ body.dark #content nav .profile-menu li a {
     }
 
     #content main .table-data .todo .todo-list {
+        min-width: 420px;
+    }
+
+    .chatContainer {
         min-width: 420px;
     }
 }

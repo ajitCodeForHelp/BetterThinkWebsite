@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import user from "../../../Assets/Image/man.png";
 
@@ -19,13 +19,26 @@ function Navbar({ toggleSidebar }) {
             document.body.classList.remove("dark");
         }
     }, [isDarkMode]);
+
+    const [toggleProfileMenu, setToggleProfileMenu] = useState(false);
+
+    const profileMenuRef = useRef();
+    useEffect(() => {
+        const handleOutsideClick = (event) => {
+            if (!profileMenuRef?.current?.contains(event.target)) {
+                setToggleProfileMenu(false)
+            }
+        }
+        document.addEventListener("mousedown", handleOutsideClick)
+    }, [profileMenuRef])
+
     return (
         <>
             {/* <!-- NAVBAR --> */}
             <nav>
                 <i className='bx bx-menu bx-sm' onClick={toggleSidebar} ></i>
 
-                <div className="profile-status">
+                <div className="profile-status" ref={profileMenuRef}>
                     {/* <input type="checkbox" className="checkbox" id="switch-mode" hidden checked={isDarkMode} onChange={handleToggle} />
                     <label className="swith-lm" for="switch-mode">
                         <i className="bx bxs-moon"></i>
@@ -47,10 +60,12 @@ function Navbar({ toggleSidebar }) {
                         </ul>
                     </div> */}
 
-                    <Link className="profile" id="profileIcon">
+                    <Link className="profile" id="profileIcon" onClick={() => {
+                        setToggleProfileMenu(!toggleProfileMenu)
+                    }}>
                         <img src={user} alt="Profile" />
                     </Link>
-                    <div className="profile-menu" id="profileMenu">
+                    <div className={`profile-menu ${toggleProfileMenu ? "show" : ""}`} id="profileMenu" >
                         <ul>
                             <li><Link>My Profile</Link></li>
                             <li><Link>Settings</Link></li>

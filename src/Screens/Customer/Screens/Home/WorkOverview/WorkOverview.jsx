@@ -13,7 +13,7 @@ function WorkOverview() {
     return (
         <>
 
-            <div className="work-view d-flex justify-content-center" style={{ minHeight: "100vh",overflow:"hidden" }} data-gole>
+            <div className="work-view d-flex justify-content-center" >
                 <div className="work-view-img mt-5 mb-5 text-center">
                     {/* Main Banner Image */}
                     <img src={img} alt="img" className="img-fluid main-banner" />

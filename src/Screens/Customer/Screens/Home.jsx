@@ -7,54 +7,71 @@ import Goals from "./Home/Goal/Goals";
 import ClientReviewsCarousel from "./Home/ClientReviewsCarousel/ClientReviewsCarousel";
 import ServicesSection from "./Home/ServicesSection/ServicesSection";
 import Footer from "../CommonComponent/Footer";
-import Sketch from "../../../Utilities/Sketch";
-import Slider from "../CommonComponent/SliderUi";
-import "../CommonComponent/Style.scss";
-import Layer from "../CommonComponent/TextLayer";
 
-function Home() {
-    const contentRef = useRef(null);
-    const scrollRef = useRef(null);
+const Home = () => {
+    const sectionsRef = useRef([]);
+
     useEffect(() => {
-        const updateScrollHeight = () => {
-            if (contentRef.current && scrollRef.current) {
-                scrollRef.current.style.height = `${contentRef.current.clientHeight}px`;
-            }
-        };
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show"); // Add class when visible
+                    } else {
+                        entry.target.classList.remove("show"); // Remove class when not visible
+                    }
+                });
+            },
+            { threshold: 0.1 } // Adjust threshold for better responsiveness
+        );
 
-        // Call the function on mount to set the initial height.
-        updateScrollHeight();
+        sectionsRef.current.forEach((section) => {
+            if (section) observer.observe(section);
+        });
 
-        // Add event listener for window resize.
-        window.addEventListener('resize', updateScrollHeight);
-
-        // Remove the event listener on cleanup.
+        // Cleanup the observer on unmount
         return () => {
-            window.removeEventListener('resize', updateScrollHeight);
+            sectionsRef.current.forEach((section) => {
+                if (section) observer.unobserve(section);
+            });
         };
     }, []);
-    useEffect(() => {
-        const sketch = new Sketch();
-    }, []);
+
     return (
         <>
-            <div id="main">
-                <div ref={contentRef} className="contentt" data-content>
-                    <Navbar />
-                    <HeroSection />
-                    <PartnerCarousel />
-                    <WorkOverview />
-                    <Slider />
-                    <ServicesSection />
-                    <Goals />
-                    <ClientReviewsCarousel />
-                    <Layer />
-                    <Footer />
-                </div>
-                <div ref={scrollRef} className="scroll" data-scroll></div>
+            <Navbar />
+
+            {/* Add ref to each section */}
+            <div ref={(el) => (sectionsRef.current[0] = el)} className="fade-in">
+                <HeroSection />
             </div>
 
+            <div ref={(el) => (sectionsRef.current[1] = el)} className="fade-in">
+                <PartnerCarousel />
+            </div>
+
+            <div ref={(el) => (sectionsRef.current[2] = el)} className="fade-in">
+                <WorkOverview />
+            </div>
+
+            <div ref={(el) => (sectionsRef.current[3] = el)} className="fade-in">
+                <ServicesSection />
+            </div>
+
+            <div ref={(el) => (sectionsRef.current[4] = el)} className="fade-in">
+                <Goals />
+            </div>
+
+            <div ref={(el) => (sectionsRef.current[5] = el)} className="fade-in">
+                <ClientReviewsCarousel />
+            </div>
+
+            <Footer />
         </>
-    )
-}
-export default Home
+    );
+};
+
+export default Home;
+
+
+

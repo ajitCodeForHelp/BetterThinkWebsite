@@ -39,12 +39,12 @@ function Navbar({ toggleSidebar }) {
                 <i className='bx bx-menu bx-sm' onClick={toggleSidebar} ></i>
 
                 <div className="profile-status" ref={profileMenuRef}>
-                    {/* <input type="checkbox" className="checkbox" id="switch-mode" hidden checked={isDarkMode} onChange={handleToggle} />
+                    <input type="checkbox" className="checkbox" id="switch-mode" hidden checked={isDarkMode} onChange={handleToggle} />
                     <label className="swith-lm" for="switch-mode">
                         <i className="bx bxs-moon"></i>
                         <i className="bx bx-sun"></i>
                         <div className="ball"></div>
-                    </label> */}
+                    </label>
                     {/* <!-- Notification Bell --> */}
                     {/* <Link className="notification" id="notificationIcon">
                         <i className='bx bxs-bell bx-tada-hover' ></i>

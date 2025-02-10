@@ -14,16 +14,16 @@ function PartnerCarousel() {
     return (
         <>
             <div className="partner-carousel d-flex justify-content-end ">
-               <div className=" d-flex mt-4 mb-4 align-items-center"style={{width:"90%"}}>
+               <div className=" caruosel-wd d-flex mt-4 mb-4 align-items-center"style={{width:"90%"}}>
                <div className="text">
                     <h4>Trusted by Hundreds of Partners</h4>
                 </div>
                 <div className="carousel d-flex w-100 ">
                     <marquee behavior="smooth" direction="left" className="d-flex ">
-                        <div className="d-flex">
+                        <div className="d-flex w">
                             {partners.map((itm) => (
-                                <div className="partner-logos d-flex">
-                                    <img src={itm.img} alt="Dd" className="partner-logo w-75 p-3" />
+                                <div className="partner-logos d-flex w-75" style={{marginRight:"10px"}}>
+                                    <img src={itm.img} alt="Dd" className="partner-logo w-100" />
                                 </div>
                             ))}
                         </div>
@@ -34,5 +34,6 @@ function PartnerCarousel() {
         </>
     );
 }
+
 
 export default PartnerCarousel;

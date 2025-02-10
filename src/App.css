@@ -112,9 +112,12 @@
    color: #000;
  }
 
- .hero-section .hero-image img {
-   width: 600px;
+ .hero-section .hero-image {
    max-width: 100%;
+ }
+
+ .hero-section .hero-image img {
+   width: 100%;
  }
 
  .hero-section .hero-nav {
@@ -215,7 +218,6 @@
 
  .hero-section .hero-text-section {
    align-items: center;
-   height: 480px;
    justify-content: center;
    display: flex;
    width: 100%;
@@ -226,6 +228,7 @@
    justify-content: space-between;
    display: flex;
    width: 80%;
+   gap: 20px;
  }
 
  .roww {
@@ -268,6 +271,9 @@
 
  .work-view .work-view-img {
    position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
  }
 
  .work-view .flex-btn {
@@ -277,15 +283,11 @@
    left: 30px;
  }
 
- .work-view .work-view-carousel {
+ .work-view .work-width {
+   width: 46%;
    position: absolute;
    top: 10%;
    left: 27%;
- }
-
- .work-view .work-width {
-   width: 520px;
-   height: auto;
  }
 
  .work-view .flex-btn .btn {
@@ -479,45 +481,24 @@
  }
 
  /* ----Contact-form------- */
- .contact input {
-   border: none;
-   outline: none;
- }
-
- .contact input:focus {
+ .contact-us input:focus {
    outline: none !important;
    box-shadow: none !important;
+   background-color: white !important;
  }
-
- .contact select {
-   border: none;
- }
-
- .contact select:focus {
+ .contact-us select:focus {
    outline: none !important;
    box-shadow: none !important;
+   background-color: white !important;
  }
 
- .contact .in {
-   border-bottom: 1px solid #222;
-   width: 100% !important;
-   font-size: 1.2rem;
+ .portfolio {
+   padding: 10px 25px;
  }
 
- .form-controll {
-   display: block;
-   width: 100%;
-   padding: 5px 0px;
-   font-size: 1rem;
-   font-weight: 400;
-   line-height: 1.5;
-   color: var(--bs-body-color);
-   appearance: none;
-   background-color: var(--bs-body-bg);
-   background-clip: padding-box;
-   border: var(--bs-border-width) solid var(--bs-border-color);
-   border-radius: var(--bs-border-radius);
-   transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+ /* --Footer--= */
+ .footer {
+   padding-top: 2rem;
  }
 
  /* -----OverPortfolio-work------- */
@@ -556,15 +537,6 @@
  .eye-icon {
    font-size: 2rem;
  }
-
-
-
-
-
-
-
-
-
 
  .profile-menu {
    display: none;
@@ -623,8 +595,29 @@
    color: white;
  }
 
+ .fade-in {
+   opacity: 0;
+   transform: translateY(10px);
+   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+ }
+
+ .fade-in.show {
+   opacity: 1;
+   transform: translateY(0);
+ }
 
  /* -----Responsive------ */
+ @media screen and (max-width:1200px) {
+   .hero-section .logo {
+     font-size: 35px;
+     font-weight: bold;
+   }
+
+   .hero-section .cta-button {
+     padding: 13px 15px;
+     font-size: 15px;
+   }
+ }
 
  @media screen and (max-width:1000px) {
    .hero-section .hero-nav nav {
@@ -650,7 +643,6 @@
    .hero-section .logo {
      font-size: 30px;
      font-weight: bold;
-
    }
 
    .offcanvas {
@@ -660,22 +652,332 @@
    .service-section {
      overflow: scroll;
    }
- }
 
- .fade-in {
-   opacity: 0;
-   transform: translateY(10px);
-   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
- }
+   .hero-section .hero-text-section .hero-flex {
+     width: 90%;
+   }
 
- .fade-in.show {
-   opacity: 1;
-   transform: translateY(0);
- }
+   .hero-section .hero-image {
+     max-width: 50%;
+   }
 
- @media (max-width: 768px) {
-   .hero-section {
+   .hero-section-b h1 {
+     width: 100%;
+     padding: 10px 20px;
+   }
+
+   .partner-carousel .caruosel-wd {
+     width: 95% !important;
+   }
+
+   .img-fluid {
+     padding: 10px 30px;
+   }
+
+   .work-view .work-width {
+     width: 44%;
+     position: absolute;
+     top: 10%;
+     left: 28%;
+   }
+
+   .work-view .work-width .ombre-extrene {
+     width: 405px;
+   }
+
+   .service-section .service-a {
+     width: 65% !important;
+     padding: 10px 40px !important;
+   }
+
+   .service-section .service-a h5 {
+     font-size: 1rem;
+   }
+
+   .goal-section .goal-a {
+     padding: 10px 20px;
+   }
+
+   .goal-section .goal-a .goal-col {
+     width: 48% !important;
+   }
+
+   .client-review .client-slide .img {
+     width: 75% !important;
+     margin-right: 10px;
+   }
+
+   .client-review .client-slide .img img {
+     width: 100% !important;
+
+   }
+
+   .client-review .client-slide p {
+     font-size: 1.1rem !important;
+   }
+
+   .client-review .swiper-slider {
+     height: 720px !important;
+   }
+
+   .client-review .client-wd {
+     width: 90%;
+   }
+
+   .cta-section .container {
+     max-width: 100%;
+     padding: 15px 30px;
+   }
+
+   .cta-section .cta-text {
+     font-size: 2rem;
+   }
+
+   .cta-section {
      padding: 20px;
+   }
+
+   .footer .container {
+     max-width: 100%;
+     padding: 25px 30px;
+   }
+ }
+
+ @media (max-width: 750px) {
+   .hero-section .hero-text {
+     font-size: 1.2rem;
+     width: 100%;
+   }
+
+   .hero-section .hero-text-section .hero-text h1 {
+     font-size: 25px;
+   }
+
+   .hero-section .hero-text-section .hero-text h2 {
+     font-size: 25px;
+   }
+
+   .hero-section .hero-text-section .hero-a {
+     height: 170px !important;
+   }
+
+   .client-slide {
+     flex-direction: column;
+     gap: 20px;
+   }
+
+   .client-review .client-slide .img {
+     width: 70% !important;
+     margin-right: 10px;
+   }
+
+   .hero-section .hero-b {
+     height: 250px !important;
+   }
+
+   .hero-section .hero-c {
+     height: 385px !important;
+     flex-direction: column;
+   }
+
+   .portfolio {
+     overflow: scroll;
+   }
+
+   .work-view .work-width {
+     width: 44%;
+     position: absolute;
+     top: 8%;
+     left: 28%;
+   }
+ }
+
+
+ @media (max-width: 600px) {
+   .hero-section .hero-text-section .hero-flex {
+     width: 90%;
+     flex-direction: column;
+   }
+
+   .hero-section .hero-image {
+     max-width: 65%;
+   }
+
+   .hero-section-b h1 {
+     width: 100%;
+     padding: 10px 20px;
+     font-size: 1.5rem;
+   }
+
+   .client-slide {
+     flex-direction: column;
+     gap: 20px;
+   }
+
+   .client-review .client-wd {
+     width: 100% !important;
+   }
+
+   .client-review .client-slide {
+     padding: 1rem !important;
+   }
+
+   .cta-section .container {
+     flex-direction: column;
+   }
+
+   .cta-section-st {
+     flex-direction: column;
+   }
+
+   .partner-carousel h4 {
+     font-size: 18px;
+   }
+
+   .hero-section .hero-b {
+     flex-direction: column;
+   }
+
+   .hero-section .hero-b {
+     height: 350px !important;
+   }
+
+   .hero-section .hero-text-section .hero-flexx {
+     width: 90%;
+     flex-direction: column;
+     padding-bottom: 20px;
+   }
+
+   .work-view .work-width {
+     width: 44%;
+     position: absolute;
+     top: 6%;
+     left: 28%;
+   }
+
+   .work-view .flex-btn .btn {
+     font-size: 12px;
+   }
+ }
+
+ @media (max-width: 500px) {
+   .hero-section .logo {
+     font-size: 25px;
+   }
+
+   .hero-section .hero-nav {
+     padding: 20px 20px;
+   }
+
+   .headerr {
+     padding: 10px 20px;
+   }
+
+   .partner-carousel h4 {
+     font-size: 14px;
+   }
+
+   .hero-section .hero-image {
+     max-width: 80%;
+   }
+
+   .goal-section .goal-a .goal-col {
+     width: 100% !important;
+   }
+
+   .cta-section .cta-text {
+     font-size: 1.4rem;
+   }
+
+   .footer .name {
+     font-size: 1.2rem !important;
+   }
+
+   .footer .name .img {
+     width: 15% !important;
+   }
+
+   .footer .no {
+     font-size: 1rem !important;
+   }
+
+   .footer .footer-logo {
+     font-size: 1.9rem;
+   }
+
+   .footer {
+     padding-top: 1rem !important;
+   }
+
+   .goal-section {
+     padding-top: 2rem !important;
+   }
+
+   .goal-section h1 {
+     font-size: 2rem !important;
+   }
+
+   .goal-section .goal-a h3 {
+     font-size: 1.4rem !important;
+   }
+
+   .client-review {
+     padding: 2rem 0rem 2rem !important;
+   }
+
+   .client-review .swiper-button-next,
+   .swiper-button-prev {
+     padding: 25px;
+   }
+
+   .client-review .client-slide p {
+     font-size: 1rem !important;
+   }
+
+   .cta-section {
+     padding: 0px 20px;
+   }
+
+   .work-view .work-width {
+     width: 43%;
+     position: absolute;
+     top: 3%;
+     left: 28%;
+   }
+ }
+
+ @media (max-width: 450px) {
+   .work-view .work-width {
+     width: 43%;
+     position: absolute;
+     top: 2%;
+     left: 28%;
+   }
+ }
+
+ @media (max-width: 400px) {
+   .hero-section .hero-image {
+     max-width: 95%;
+   }
+
+   .work-view .work-width {
+     width: 43%;
+     position: absolute;
+     top: -2%;
+     left: 28%;
+   }
+ }
+
+ @media (max-width: 350px) {
+   .hero-section .logo {
+     font-size: 20px;
+   }
+
+   .work-view .work-width {
+     width: 43%;
+     position: absolute;
+     top: -4%;
+     left: 28%;
    }
 
  }

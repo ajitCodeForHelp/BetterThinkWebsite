@@ -19,11 +19,11 @@ function WorkOverview() {
                     <img src={img} alt="img" className="img-fluid main-banner" />
 
                     {/* Category Buttons */}
-                    <div className="flex-btn mt-3">
+                    {/* <div className="flex-btn mt-3">
                         <Button variant="dark" className="m-2 py-2 px-4">E-Commerce</Button>
                         <Button variant="dark" className="m-2 py-2 px-4">Web Site Design</Button>
                         <Button variant="dark" className="m-2 py-2 px-4">Shopify</Button>
-                    </div>
+                    </div> */}
                     <div className="work-view-carousel ">
 
                         <div class="container my-5 work-width">

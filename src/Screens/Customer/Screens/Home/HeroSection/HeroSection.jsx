@@ -33,18 +33,20 @@ function HeroSection() {
         }
     }, [charIndex, lineIndex, currentText]);
 
-    
+
     return (
 
         <>
             <div className="hero-section">
                 <div className="hero-text-section d-flex .mt-5">
                     <div className="hero-flex">
-                        <div className="hero-text">
-                            {displayedLines.map((line, index) => (
-                                <h2 key={index} className="animated-text">{line}</h2>
-                            ))}
-                            <h1 className="animated-text">{currentText}</h1>
+                        <div className="hero-a" style={{ height: "320px" }}>
+                            <div className="hero-text">
+                                {displayedLines.map((line, index) => (
+                                    <h2 key={index} className="animated-text">{line}</h2>
+                                ))}
+                                <h1 className="animated-text">{currentText}</h1>
+                            </div>
                         </div>
 
                         {/* Right Side: Image */}

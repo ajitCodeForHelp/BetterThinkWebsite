@@ -23,8 +23,8 @@ const PortfolioGallery = () => {
     : projects.filter(project => project.category === selectedCategory);
 
   return (
-    <div className="container mt-4">
-      <div className="d-flex justify-content-evenly mb-4">
+    <>
+      <div className="portfolio d-flex justify-content-evenly mb-4">
         {categories.map(category => (
           <button
             key={category}
@@ -36,20 +36,23 @@ const PortfolioGallery = () => {
           </button>
         ))}
       </div>
-      <div className="row">
-        {filteredProjects.map((project, index) => (
-          <div key={index} className="col-md-4 col-sm-6 mb-4">
-            <div className="card border-0 project-card">
-              <img src={project.image} className="project-image" alt={project.title} />
-              <div className="overlay">
-                <i className="eye-icon"><FaEye /></i> {/* You can replace this with an actual eye icon */}
-              </div>
+      <div className="container mt-4">
 
+        <div className="row">
+          {filteredProjects.map((project, index) => (
+            <div key={index} className="col-md-4 col-sm-6 mb-4">
+              <div className="card border-0 project-card">
+                <img src={project.image} className="project-image" alt={project.title} />
+                <div className="overlay">
+                  <i className="eye-icon"><FaEye /></i> {/* You can replace this with an actual eye icon */}
+                </div>
+
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -46,9 +46,9 @@ const Home = () => {
                 <HeroSection />
             </div>
 
-            <div ref={(el) => (sectionsRef.current[1] = el)} className="fade-in">
+            {/* <div ref={(el) => (sectionsRef.current[1] = el)} className="fade-in">
                 <PartnerCarousel />
-            </div>
+            </div> */}
 
             <div ref={(el) => (sectionsRef.current[2] = el)} className="fade-in">
                 <WorkOverview />

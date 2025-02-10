@@ -108,68 +108,66 @@ function Navbar() {
                     </Link>
                     <div className="res-slider-btn">
                         {/* <h2><AiOutlineMenu /></h2> */}
-                        <div>
-                            {/* Button to Open Side Menu */}
-                            <h2 className="mt-3" onClick={handleShow}><AiOutlineMenu /></h2>
-                            {/* <Button variant="dark" onClick={handleShow} className="mt-3">
+                        {/* Button to Open Side Menu */}
+                        <h2 className="" onClick={handleShow}><AiOutlineMenu /></h2>
+                        {/* <Button variant="dark" onClick={handleShow} className="mt-3">
 
                             </Button> */}
 
-                            {/* Side Menu */}
-                            <Offcanvas show={show} onHide={handleClose} placement="end">
-                                <Offcanvas.Header closeButton>
-                                    <Offcanvas.Title>
-                                        <div className="hero-nav">
-                                            {/* <span className="fw-bold text-primary">mobikasa</span> */}
-                                            <div className="logo logo-a fw-bold ">
-                                                <span className="black">Better</span>
-                                                <span className="white">Think</span>
-                                                <span className="black">IT</span>
-                                                <span className="white">Solution</span>
-                                            </div>
+                        {/* Side Menu */}
+                        <Offcanvas show={show} onHide={handleClose} placement="end">
+                            <Offcanvas.Header closeButton>
+                                <Offcanvas.Title>
+                                    <div className="hero-nav">
+                                        {/* <span className="fw-bold text-primary">mobikasa</span> */}
+                                        <div className="logo logo-a fw-bold ">
+                                            <span className="black">Better</span>
+                                            <span className="white">Think</span>
+                                            <span className="black">IT</span>
+                                            <span className="white">Solution</span>
                                         </div>
-                                    </Offcanvas.Title>
-                                </Offcanvas.Header>
-                                <Offcanvas.Body>
-                                    <nav>
-                                        <ul className="list-unstyled">
-                                            <li className="mb-3">
-                                                <a href="#services" className="text-decoration-none text-dark fw-bold">
-                                                    Services
-                                                </a>
-                                            </li>
-                                            <li className="mb-3">
-                                                <a href="#ecommerce" className="text-decoration-none text-dark fw-bold">
-                                                    E-Commerce
-                                                </a>
-                                            </li>
-                                            <li className="mb-3">
-                                                <a href="#development" className="text-decoration-none text-dark fw-bold">
-                                                    Development
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                    <div className="mt-4 res-2">
-                                        <Link to="/contactform">
-                                            <Button className="w-100 fw-bold start-btn" style={{backgroundColor:"#f7931e", color:"white", outline:"none", border:"none"}}>
-                                                Let’s get Started →
-                                            </Button>
-                                        </Link>
+                                    </div>
+                                </Offcanvas.Title>
+                            </Offcanvas.Header>
+                            <Offcanvas.Body>
+                                <nav>
+                                    <ul className="list-unstyled">
+                                        <li className="mb-3">
+                                            <a href="#services" className="text-decoration-none text-dark fw-bold">
+                                                Services
+                                            </a>
+                                        </li>
+                                        <li className="mb-3">
+                                            <a href="#ecommerce" className="text-decoration-none text-dark fw-bold">
+                                                E-Commerce
+                                            </a>
+                                        </li>
+                                        <li className="mb-3">
+                                            <a href="#development" className="text-decoration-none text-dark fw-bold">
+                                                Development
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <div className="mt-4 res-2">
+                                    <Link to="/contactform">
+                                        <Button className="w-100 fw-bold start-btn" style={{ backgroundColor: "#f7931e", color: "white", outline: "none", border: "none" }}>
+                                            Let’s get Started →
+                                        </Button>
+                                    </Link>
 
-                                    </div>
-                                    <div className="mt-4">
-                                        <p className="mb-1">
-                                            <i className="bi bi-telephone-fill me-2"></i>+1-646-880-4504
-                                        </p>
-                                        <p className="mb-0">
-                                            <i className="bi bi-geo-alt-fill me-2"></i>
-                                            135 Madison Ave, 8th FL <br /> New York, NY 10016
-                                        </p>
-                                    </div>
-                                </Offcanvas.Body>
-                            </Offcanvas>
-                        </div>
+                                </div>
+                                <div className="mt-4">
+                                    <p className="mb-1">
+                                        <i className="bi bi-telephone-fill me-2"></i>+1-646-880-4504
+                                    </p>
+                                    <p className="mb-0">
+                                        <i className="bi bi-geo-alt-fill me-2"></i>
+                                        135 Madison Ave, 8th FL <br /> New York, NY 10016
+                                    </p>
+                                </div>
+                            </Offcanvas.Body>
+                        </Offcanvas>
                     </div>
                 </div>
             </div>

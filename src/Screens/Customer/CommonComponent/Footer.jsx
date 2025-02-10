@@ -10,7 +10,7 @@ const Footer = () => {
         <>
             <div className="cta-section">
                 <Container>
-                    <div className="align-items-center d-flex justify-content-between flex-wrap">
+                    <div className="align-items-center d-flex justify-content-between flex-wrap cta-section-st">
                         <div className="animation-h">
                             <h2 className="cta-text">Whatever your goal, <br /> let’s get started.</h2>
                         </div>
@@ -23,27 +23,27 @@ const Footer = () => {
                 </Container>
             </div>
 
-            <footer className="footer text-light py-5" style={{ backgroundColor: "#222" }}>
+            <footer className="footer text-light " style={{ backgroundColor: "#222" }}>
                 <Container>
                     <Row className="justify-content-between">
                         {/* Left Section */}
                         <Col md={6} className="mb-4">
                             <h6 className="fw-bold mb-4" style={{ color: "#f7931e", fontSize: "1.2rem" }}>Get in Touch</h6>
-                            <div className="d-flex align-items-center mb-3" style={{ fontSize: "1.8rem" }}>
-                                <div className="me-2" style={{ width: "12%" }}>
+                            <div className=" name d-flex align-items-center mb-3" style={{ fontSize: "1.8rem" }}>
+                                <div className="img me-2" style={{ width: "12%" }}>
                                     <img src={img} alt="Profile" className="rounded-circle me-2 bg-white" style={{ width: "100%" }} />
                                 </div>
-                                <div>
+                                <div >
                                     <strong>We are happy to assist you</strong>
                                 </div>
                             </div>
-                            <p className="mb-4" style={{ fontSize: "1.2rem", marginTop: "25px" }}>
+                            <p className="no mb-4" style={{ fontSize: "1.2rem", marginTop: "25px" }}>
                                 <FaPhoneAlt className="me-2" style={{ color: "#f7931e" }} /> +1131212123
                             </p>
-                            <p className="mb-4" style={{ fontSize: "1.2rem" }}>
+                            <p className="no mb-4" style={{ fontSize: "1.2rem" }}>
                                 <FaEnvelope className="me-2" style={{ color: "#f7931e" }} /> qweqwr@gamil.com
                             </p>
-                            <p className="mb-4" style={{ fontSize: "1.2rem" }}>
+                            <p className="no mb-4" style={{ fontSize: "1.2rem" }}>
                                 <FaMapMarkerAlt className="me-2" style={{ color: "#f7931e" }} /> <strong>New York Office</strong>
                             </p>
                             <p style={{ fontSize: "1.2rem" }}>135 Madison Ave, 8th FL, New York, NY 10016</p>

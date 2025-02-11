@@ -5,6 +5,7 @@ import { FaMapMarkerAlt, FaMobileAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
 import { Button, Offcanvas } from "react-bootstrap";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 function Navbar() {
     const [toggleProfileMenu, setToggleProfileMenu] = useState(false);
@@ -92,9 +93,9 @@ function Navbar() {
                             </Link>
                             <div className={`profile-menu ${toggleProfileMenu ? "show" : ""}`} id="profileMenu" >
                                 <ul>
-                                    <li><Link>E-Commerce</Link></li>
-                                    <li><Link>Web Development</Link></li>
-                                    <li><Link>UI/UX</Link></li>
+                                    <li><Link><FaArrowRightLong/> E-Commerce</Link></li>
+                                    <li><Link><FaArrowRightLong/> Web Development</Link></li>
+                                    <li><Link><FaArrowRightLong/> UI/UX</Link></li>
                                 </ul>
                             </div>
                         </div>

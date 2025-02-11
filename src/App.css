@@ -346,11 +346,21 @@
  /* -----service-section----- */
 
  .service-section .box:hover {
-   background-color: #f7931e !important;
-   cursor: pointer;
- }
+  background-color: #f7931e !important;
+  cursor: pointer;
+
+}
 
  /* ----Footer----- */
+ .messagee{
+  transition: all ease-in .3s;
+ }
+ .messagee:hover{
+  transform: scale(1.2);
+  transition: all ease-in .3s;
+  box-shadow: 0px 0px 15px #f7931e;
+ }
+
  .footer .footer-logo {
    font-size: 40px;
    font-weight: bold;
@@ -486,6 +496,7 @@
    box-shadow: none !important;
    background-color: white !important;
  }
+
  .contact-us select:focus {
    outline: none !important;
    box-shadow: none !important;
@@ -545,7 +556,7 @@
    background: var(--light);
    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
    border-radius: 15px;
-   width: 200px;
+   width: 230px;
    z-index: 9999;
    font-family: var(--lato);
  }
@@ -562,27 +573,37 @@
  }
 
  .profile-menu li:hover {
-   background-color: var(--light-blue);
-   color: var(--dark);
+   /* background-color: var(--light-blue); */
+   /* color: var(--dark); */
+   /* color: white; */
+   background-color: #f7931e;
    cursor: pointer;
+   border-radius: 8px;
  }
-
+ .profile-menu li:hover a{
+  color: #f1f1f1;
+ }
  .profile-menu li a {
-   color: var(--dark);
+   color: #ff7b02;
    font-size: 16px;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   gap: 20px;
  }
 
  body.dark .profile-menu li:hover a {
    color: var(--light);
+   color: white;
  }
 
  body.dark .profile-menu li a {
    color: var(--dark);
  }
 
- .profile-menu li:hover a {
+ /* .profile-menu li:hover a {
    color: var(--dark);
- }
+ } */
 
  /* Active State for Menus */
  .notification-menu.show,

@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Navbar from "../CommonComponent/Navbar";
 import HeroSection from "./Home/HeroSection/HeroSection";
-import PartnerCarousel from "./Home/Carousel/PartnerCarousel";
 import WorkOverview from "./Home/WorkOverview/WorkOverview";
 import Goals from "./Home/Goal/Goals";
 import ClientReviewsCarousel from "./Home/ClientReviewsCarousel/ClientReviewsCarousel";
@@ -39,12 +38,15 @@ const Home = () => {
 
     return (
         <>
+
             <Navbar />
 
             {/* Add ref to each section */}
             <div ref={(el) => (sectionsRef.current[0] = el)} className="fade-in">
                 <HeroSection />
             </div>
+
+
 
             {/* <div ref={(el) => (sectionsRef.current[1] = el)} className="fade-in">
                 <PartnerCarousel />

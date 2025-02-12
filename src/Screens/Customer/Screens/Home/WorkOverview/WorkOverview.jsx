@@ -35,22 +35,23 @@ function WorkOverview() {
                         >
                             <SwiperSlide>
                                 <img src={image1} className="d-block w-100" alt="Slide 1" />
-                                <div className="carousel-caption">
+                                {/* <div className="carousel-caption">
                                     <h5>First Slide</h5>
-                                </div>
+                                </div> */}
                             </SwiperSlide>
                             <SwiperSlide>
                                 <img src={image2} className="d-block w-100" alt="Slide 2" />
-                                <div className="carousel-caption">
+                                {/* <div className="carousel-caption">
                                     <h5>Second Slide</h5>
-                                </div>
+                                </div> */}
                             </SwiperSlide>
                             <SwiperSlide>
                                 <img src={image3} className="d-block w-100" alt="Slide 3" />
-                                <div className="carousel-caption">
+                                {/* <div className="carousel-caption">
                                     <h5>Third Slide</h5>
-                                </div>
+                                </div> */}
                             </SwiperSlide>
+                            
                         </Swiper>
                     </div>
                 </div>

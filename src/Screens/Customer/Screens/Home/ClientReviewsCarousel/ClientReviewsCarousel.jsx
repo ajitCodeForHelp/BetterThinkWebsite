@@ -2,6 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import img from "../../../../../Assets/pearson.png";
+import Bgimg from "../../../../../Assets/line-background-footer.webp"
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -32,10 +33,10 @@ function ClientReviewsCarousel() {
           spaceBetween={30}
           centeredSlides={true}
           pagination={{ clickable: true }}
-           autoplay={{
-                        delay: 2800,
-                        disableOnInteraction: false,
-                    }}
+          autoplay={{
+            delay: 2800,
+            disableOnInteraction: false,
+          }}
           navigation={true}
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper"
@@ -65,6 +66,9 @@ function ClientReviewsCarousel() {
             </SwiperSlide>
           ))}
         </Swiper>
+      </div>
+      <div className="bg-img">
+        <img src={Bgimg} alt="bg-img" />
       </div>
     </div>
   );

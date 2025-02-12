@@ -5,6 +5,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { MdMessage } from "react-icons/md";
+import Bgimg from "../../../Assets/line-background-footer.webp"
 
 const Footer = () => {
     return (
@@ -86,11 +87,14 @@ const Footer = () => {
                         </Col>
                     </Row>
                 </Container>
+                <div className="bg-img">
+                    <img src={Bgimg} alt="bg-img" />
+                </div>
             </footer>
             <Link to="/contactform">
-            <div className="position-fixed z-3 m-auto" style={{ right: "20px", bottom: "20px" }}>
-                <div className="rounded-circle d-flex justify-content-center align-item-center fs-3 messagee" style={{ backgroundColor: "#ff7b02", color: "#222", height: "50px", width: "50px", paddingTop: "12px",cursor:"pointer" }}><MdMessage /></div>
-            </div>
+                <div className="position-fixed z-3 m-auto" style={{ right: "20px", bottom: "20px" }}>
+                    <div className="rounded-circle d-flex justify-content-center align-item-center fs-3 messagee" style={{ backgroundColor: "#ff7b02", color: "#222", height: "50px", width: "50px", paddingTop: "12px", cursor: "pointer" }}><MdMessage /></div>
+                </div>
             </Link>
         </>
     );

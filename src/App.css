@@ -118,6 +118,8 @@
 
  .hero-section .hero-image img {
    width: 100%;
+   position: relative;
+   z-index: 2;
  }
 
  .hero-section .hero-nav {
@@ -303,14 +305,23 @@
  .work-view .flex-btn .btn:hover {
    background-color: #7e7e7e;
  }
-
  /* ---Client-Review---- */
  .client-review {
    display: flex;
    justify-content: center;
    align-items: center;
+   position: relative;
+   overflow: hidden;
  }
 
+.client-review .bg-img{
+  position: absolute;
+  top: 0;
+  color: white;
+  max-width: 100%;
+  max-height: fit-content;
+  opacity: .1;
+ }
  .client-review .swiper-button-next,
  .swiper-button-prev {
    padding: 30px;
@@ -510,6 +521,17 @@
  /* --Footer--= */
  .footer {
    padding-top: 2rem;
+   padding-bottom: 2rem;
+   position: relative;
+   overflow: hidden;
+ }
+ .footer .bg-img{
+  position: absolute;
+  top: 0;
+  color: white;
+  max-width: 100%;
+  max-height: fit-content;
+  opacity: .1;
  }
 
  /* -----OverPortfolio-work------- */
@@ -573,9 +595,6 @@
  }
 
  .profile-menu li:hover {
-   /* background-color: var(--light-blue); */
-   /* color: var(--dark); */
-   /* color: white; */
    background-color: #f7931e;
    cursor: pointer;
    border-radius: 8px;
@@ -811,6 +830,9 @@
      top: 8%;
      left: 28%;
    }
+   .footer .bg-img img{
+ height: 950px;
+   }
  }
 
 
@@ -965,6 +987,9 @@
      top: 3%;
      left: 28%;
    }
+   .work-view .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: var(--swiper-pagination-bottom, 0px) !important;
+   }
  }
 
  @media (max-width: 450px) {
@@ -973,6 +998,9 @@
      position: absolute;
      top: 2%;
      left: 28%;
+   }
+   .work-view .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: var(--swiper-pagination-bottom, 0px) !important;
    }
  }
 
@@ -987,6 +1015,9 @@
      top: -2%;
      left: 28%;
    }
+   .work-view .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: var(--swiper-pagination-bottom, 0px) !important;
+   }
  }
 
  @media (max-width: 350px) {
@@ -999,6 +1030,9 @@
      position: absolute;
      top: -4%;
      left: 28%;
+   }
+   .work-view .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: var(--swiper-pagination-bottom, 0px) !important;
    }
 
  }
